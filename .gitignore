@@ -72,3 +72,5 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+Windows/INNO_Bomberman/Binaries/Win64/INNO_Bomberman.pdb
+Windows/INNO_Bomberman/Binaries/Win64/INNO_Bomberman.pdb
