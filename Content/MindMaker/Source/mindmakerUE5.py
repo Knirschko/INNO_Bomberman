@@ -976,7 +976,11 @@ def sendobs(sid, obsdata):
     global UEdone
 
     obsflag = 1
-    print("Mindmaker recieved observations and reward from UE, passing back an action")
+    # print("Mindmaker recieved observations and reward from UE, passing back an action")
+    # jassi
+    # don't see this change in the output
+    print("Mindmaker recieved observations and reward from UE, passing back an action HELLO")
+    # jassiend
     jsonInput = json.loads(obsdata);
     observations = jsonInput['observations']     
     UEreward = jsonInput['reward'];
@@ -987,6 +991,13 @@ def sendobs(sid, obsdata):
 
 #This sets up the server connection, with UE acting as the client in a socketIO relationship, will default to eventlet    
 if __name__ == '__main__':
+    # jassi
+    # doesn't do a thing but generally, i don't see any changes i make in this file
+    # original_stdout = sys.stdout # Save a reference to the original standard output
+    # f = open('mindmakeroutput.txt', 'w')
+    # sys.stdout = f # Change the standard output to the file we created.
+    # jassiend
+
     if sio.async_mode == 'threading':
         # deploy with Werkzeug
         print("1 ran")
@@ -1024,7 +1035,10 @@ if __name__ == '__main__':
               '--wsgi-file app.py --callable app')
     else:
         print('Unknown async_mode: ' + sio.async_mode)
-        
+
+    # jassi
+    # sys.stdout = original_stdout # Reset the standard output to its original value
+    # jassiend
    
     
 
